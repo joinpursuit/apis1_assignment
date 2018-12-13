@@ -8,22 +8,27 @@ Let's expand this simple structure to something a little bit deeper. Let's also 
   - `id` (_column_): integer, **primary key**
   - `name`: string
   - `age`: integer
+
 - Posts
   - `id`: integer, **primary key**
   - `poster_id`: integer, **foreign key** referencing the column `id` in Users.
   - `body`: string
+
 - Likes
   - `id`: integer, **primary key**
   - `liker_id`: integer, **foreign key** referencing the column `id` in Users
   - `post_id`: integer, **foreign key** referencing the column `id` in Posts.
+
 - Comments
   - `id`: integer, **primary key**
   - `commenter_id`: integer, **foreign key** referencing the column `id` in Users.
   - `post_id`: integer, **foreign key** referencing the column `id` in Posts.
   - `body`: string
+
 - Albums
   - `id`: integer, **primary key**
   - `user_id`: integer, **foreign key** referencing the column `id` in Users
+
 - Pictures
   - `id`: integer, **primary key**
   - `album_id`: integer, **foreign key** referencing the column `id` in Albums
