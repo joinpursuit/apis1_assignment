@@ -38,3 +38,6 @@ CREATE TABLE pictures (
   album_id INT REFERENCES albums(id),
   url VARCHAR NOT NULL
 );
+
+-- INSERT INTO users (name, age) VALUES ('VicTOR Adams', 47), ('Lopez', 33);
+-- INSERT INTO posts (poster_id, body) VALUES (1, 'Another SHITTY POST!')
