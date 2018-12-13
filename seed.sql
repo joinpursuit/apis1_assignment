@@ -38,3 +38,5 @@ CREATE TABLE pictures (
   album_id INT REFERENCES albums(id),
   url TEXT NOT NULL
 );
+
+INSERT INTO users(name, age) VALUES ('Victoria Adams',47), ('Gerson Lopez',33)
