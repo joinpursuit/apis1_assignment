@@ -1,40 +1,47 @@
-DROP DATABASE IF EXISTS
-CREATE DATABASE
+DROP DATABASE IF EXISTS facebook;
+CREATE DATABASE facebook;
 
-\c
+\c facebook;
 
 CREATE TABLE users(
-  id INT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name VARCHAR NOT NULL,
   age INT NOT NULL
-)
+);
 
 CREATE TABLE posts (
-  id
-  poster_id
-  body
-)
+  id SERIAL PRIMARY KEY,
+  poster_id INT REFERENCES users(id),
+  body TEXT NOT NULL
+);
 
 CREATE TABLE likes (
-  id
-  liker_id
-  post_id
-)
+  id SERIAL PRIMARY KEY,
+  liker_id INT REFERENCES users(id),
+  post_id INT REFERENCES posts(id)
+);
 
 CREATE TABLE comments (
-  id
-  commenter_id
-  post_id
-  body
-)
+  id INT PRIMARY KEY,
+  commenter_id INT REFERENCES users(id),
+  post_id INT REFERENCES posts(id),
+  body TEXT NOT NULL
+);
 
 CREATE TABLE albums (
-  id
-  user_id
-)
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id)
+);
 
 CREATE TABLE pictures(
-  id
-  album_id
-  url
-)
+  id SERIAL PRIMARY KEY,
+  album_id INT REFERENCES albums(id),
+  url VARCHAR NOT NULL
+);
+
+
+INSERT INTO users(name, age) VALUES ('kevin', 24);
+-- INSERT INTO ;
+-- INSERT INTO ;
+
+-- cat seed.sql | psql
