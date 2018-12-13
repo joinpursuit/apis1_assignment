@@ -40,8 +40,7 @@ CREATE TABLE pictures(
 );
 
 
-INSERT INTO users(name, age) VALUES ('kevin', 24);
--- INSERT INTO ;
--- INSERT INTO ;
+INSERT INTO users(name, age) VALUES ('Victoria Adams', 47), ('Gerson Lopez', 33);
+
 
 -- cat seed.sql | psql
