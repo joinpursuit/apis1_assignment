@@ -31,7 +31,7 @@ CREATE TABLE comments (
 
 CREATE TABLE albums (
   id SERIAL PRIMARY KEY,
-  user_id INT REFERENCES user(id)
+  user_id INT REFERENCES users(id)
 );
 
 CREATE TABLE pictures (
@@ -40,4 +40,4 @@ CREATE TABLE pictures (
   url VARCHAR NOT NULL
 );
 
-INSERT INTO users (name, age) VALUES ("Victoria Adams", 47), ("Gerson Lopez", 33);
+INSERT INTO users (name, age) VALUES ('Victoria Adams', 47), ('Gerson Lopez', 33);
