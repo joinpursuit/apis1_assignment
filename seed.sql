@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS FBDB;
-CREATE DATABASE FBDB;
+DROP DATABASE IF EXISTS apis1_assignment;
+CREATE DATABASE apis1_assignment;
 
-\c FBDB;
+\c apis1_assignment;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
